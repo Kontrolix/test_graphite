@@ -1,4 +1,4 @@
-export $branch=5
+export branch=5
 git checkout main
 git pull
 git checkout -b "A$branch"
