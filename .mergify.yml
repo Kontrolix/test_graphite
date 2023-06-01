@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: merge on label
     conditions:
-      - label=queue
+      - label=merge
       - base=main
     actions:
       queue:
@@ -10,4 +10,4 @@ pull_request_rules:
 queue_rules:
   - name: default
     conditions:
-      - label=merge
+      - base=main
