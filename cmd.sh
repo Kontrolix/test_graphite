@@ -1,15 +1,11 @@
-export branch=7
+export branch_number=13
 git checkout main
 git pull
-git checkout -b "A$branch"
-touch "add_A$branch"
-git add "add_A$branch"
-git commit -a -m "Add A$branch"
-git checkout -b "B$branch"
-touch "add_B$branch"
-git add "add_B$branch"
-git commit -a -m "Add B$branch"
-git checkout -b "C$branch"
-touch "add_C$branch"
-git add "add_C$branch"
-git commit -a -m "Add C$branch"
+branches=( A$branch_number B$branch_number C$branch_number )
+for branch in "${branches[@]}"
+do
+    git checkout -b "$branch"
+    touch "file_$branch"
+    git add "file_$branch"
+    git commit -a -m "Add $branch"
+done
