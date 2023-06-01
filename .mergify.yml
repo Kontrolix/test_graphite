@@ -1,5 +1,5 @@
 pull_request_rules:
-  - name: Merge on approval
+  - name: Merge on approvall
     conditions:
       - label=Approved
       - base=main
