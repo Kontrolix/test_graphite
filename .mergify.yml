@@ -1,7 +1,7 @@
 pull_request_rules:
-  - name: merge on label
+  - name: Merge on approval
     conditions:
-      - label=merge
+      - "#approved-reviews-by>=1"
       - base=main
     actions:
       queue:
