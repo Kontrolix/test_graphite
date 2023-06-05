@@ -1,13 +1,11 @@
 pull_request_rules:
-  - name: Merge on approvall
+  - name: Merge on approval
     conditions:
       - label=Approved
       - base=main
-    actions:
-      queue:
-        name: default
+    actions: queue
 
 queue_rules:
   - name: default
-    conditions:
+    routing_condition:
       - base=main
